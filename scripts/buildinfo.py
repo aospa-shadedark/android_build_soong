@@ -163,6 +163,9 @@ def main():
     if option.aospa_build_variant:
       print(f"ro.aospa.build.variant={option.aospa_build_variant}")
 
+# Force green verifiedbootstate for app compatibility (e.g., Revolut)
+    print("ro.appcompat_override.ro.boot.verifiedbootstate=green")
+
     print(f"# end build properties")
 
 if __name__ == "__main__":
